@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+   
+    <head>
+        <meta charset="utf-8"/>
+        <title>Our Services | Animation, Web Development, Dashboard & SEO | Orezilla Technology</title>
+        <meta name="description" content="Discover Orezilla Technology’s full range of digital services — from 2D & 3D animation, motion graphics, and video editing to web application development, UI/UX design, dashboard creation, and SEO optimization.">
+        <meta name="keywords" content="2D animation, 3D animation, explainer videos, product animation, motion graphics, web application development, mobile app development, UI UX design, dashboard creation, SEO optimization, graphics design, video editing, creative tech solutions">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Explore the creative and IT services offered by Orezilla Technology." name="description"/>
+        <meta content="FairTech" name="author"/>
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+		    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+      <style>
+        /* Custom styles to make new sections fit the existing theme */
+        
+        
+        
+        .step-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: 500;
+        }
+        .timeline-line {
+            height: 2px;
+            background: #d9534f;
+            margin: 0 auto;
+            width: 80%;
+            position: relative;
+            top: 25px;
+            z-index: 0;
+            display: none; /* Hide on small screens */
+        }
+        @media (min-width: 768px) {
+            .timeline-line {
+                display: block; /* Show timeline on desktop */
+            }
+        }
+    </style>
+    </head>
+   
+  
+    <body id="body" data-spy="scroll" data-target=".header">
+
+          <header class="header navbar-fixed-top">
+              <nav class="navbar" role="navigation">
+                <div class="container">
+                      <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                          <div class="logo">
+                            <!-- Link to index.html -->
+                            <a class="logo-wrap" href="index.html" style="padding-top: 25px;">
+                                <h3 class="logo-img logo-img-main" alt="Orezilla Logo"><strong style="color: red;">Orezilla</strong><strong  style="color: white;">Technology</strong></h3>
+                                <h3 class="logo-img logo-img-active" alt="Orezilla Dark Logo"><strong style="color: red;">Orezilla</strong><strong  style="color: rgb(83, 83, 83);">Technology</strong></h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <!-- Navigation links point to sections on index.html, except for Services -->
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#about">About Us</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#products">Projects</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover active" href="services.html">Services</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+			</header>
+       
+        <!--========== SLIDER (Reduced Height via CSS) ==========-->
+        <div id="carousel-example-generic" class="carousel slide short-slider" data-ride="carousel">
+            <div class="container">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+            </div>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <!-- Image is now scaled down by the custom CSS (short-slider) -->
+                    <img class="img-responsive" src="img/service1.jpg" alt="Creative Services Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h1 class="carousel-title" data-aos="fade-up" data-aos-delay="0">Creativity & Innovation: Services That Deliver</h1>
+                                <p class="color-white" data-aos="fade-up" data-aos-delay="200">Explore our full suite of professional digital services, tailored to transform your business and captivate your audience.</p>
+                            </div>
+                            <a href="#services" class="btn-theme btn-theme-sm btn-white-brd text-uppercase js_smooth-scroll" data-aos="fade-up" data-aos-delay="400">View All Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="img/service2.jpg" alt="IT Solutions Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h2 class="carousel-title" data-aos="fade-up" data-aos-delay="0">Custom IT Solutions & Digital Transformation</h2>
+                                <p class="color-white" data-aos="fade-up" data-aos-delay="200">From advanced data dashboards to secure cloud integration, we provide the technical foundation for your growth.</p>
+                            </div>
+                            <a href="#full-services" class="btn-theme btn-theme-sm btn-white-brd text-uppercase js_smooth-scroll" data-aos="fade-up" data-aos-delay="400">Get a Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--========== END SLIDER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+          <div id="services">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="content-lg container">
+                <div class="row margin-b-40 text-center">
+                    <div class="col-sm-12">
+                    <h2 data-aos="fade-up">Our Services</h2>
+                    <p data-aos="fade-up">At <strong>Orezilla Technology</strong>, we merge creativity with technology to deliver end-to-end digital solutions. Our diverse range of services — including animation, design, development, and data dashboards — empowers businesses to innovate, communicate, and grow in today’s digital world.</p>
+                    </div>
+                </div>
+
+                <!-- ROW 1 -->
+                <div class="row row-space-1 margin-b-2">
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-camrecorder"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>2D & 3D Animations</h3>
+                        <p>Create stunning, professional animations that bring stories, concepts, and products to life with cinematic precision.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-screen-desktop"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Explainer Videos</h3>
+                        <p>Deliver your message clearly through compelling explainer videos that educate, engage, and convert your audience.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-present"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Product Animation</h3>
+                        <p>Highlight your product’s features with realistic 3D animations that elevate your marketing and presentations.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="row row-space-1 margin-b-2">
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-layers"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Web & Mobile App Development</h3>
+                        <p>Build high-performance web and mobile applications tailored to your business goals and customer needs.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-graph"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>SEO Optimization</h3>
+                        <p>Boost your online visibility with data-driven SEO strategies that increase traffic, engagement, and conversions.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-speedometer"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>UI / UX Design</h3>
+                        <p>We craft intuitive, user-centered designs that enhance experiences and strengthen your digital presence.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3 -->
+                <div class="row row-space-1">
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-camera"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Photography & Video Editing</h3>
+                        <p>Deliver professional visuals and post-production edits that capture attention and convey your brand’s story.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-chart"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Dashboard Creation</h3>
+                        <p>Transform your business data into powerful dashboards that drive smarter decisions and operational efficiency.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-pencil"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Graphic Design</h3>
+                        <p>Build a strong visual identity through creative, high-quality design for digital and print marketing materials.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <!-- End Page Layout -->
+
+        <div id="process">
+    <div class="content-lg container">
+        <div class="row margin-b-40 text-center">
+            <div class="col-sm-12">
+                <h2 data-aos="fade-up">Our Streamlined Digital Process</h2>
+                <p data-aos="fade-up">A transparent and collaborative four-step journey ensures your project is built efficiently, meets all requirements, and delivers maximum impact.</p>
+            </div>
+        </div>
+
+        <div class="timeline-line"></div> <!-- Decorative line for large screens -->
+
+        <div class="row text-center">
+            <!-- Step 1: Discovery -->
+            <div class="col-sm-3 sm-margin-b-50" data-aos="zoom-in" data-aos-delay="100">
+                <div class="step-number">01</div>
+                <div class="service-element margin-b-20">
+                    <i class="service-icon icon-target" style="font-size: 40px; color: #333;"></i>
+                </div>
+                <h3 class="step-title">Discovery & Planning</h3>
+                <p class="color-dark">We define project scope, goals, target audience, and create a robust technical blueprint.</p>
+            </div>
+
+            <!-- Step 2: Design -->
+            <div class="col-sm-3 sm-margin-b-50" data-aos="zoom-in" data-aos-delay="200">
+                <div class="step-number">02</div>
+                <div class="service-element margin-b-20">
+                    <i class="service-icon icon-grid" style="font-size: 40px; color: #333;"></i>
+                </div>
+                <h3 class="step-title">Design & Prototyping</h3>
+                <p class="color-dark">Crafting wireframes, UI/UX designs, and creating initial storyboards for animation projects for your approval.</p>
+            </div>
+
+            <!-- Step 3: Development -->
+            <div class="col-sm-3 sm-margin-b-50" data-aos="zoom-in" data-aos-delay="300">
+                <div class="step-number">03</div>
+                <div class="service-element margin-b-20">
+                    <i class="service-icon icon-settings" style="font-size: 40px; color: #333;"></i>
+                </div>
+                <h3 class="step-title">Development & Testing</h3>
+                <p class="color-dark">Agile development cycles, continuous integration, and rigorous testing ensure flawless functionality.</p>
+            </div>
+
+            <!-- Step 4: Deployment -->
+            <div class="col-sm-3 sm-margin-b-50" data-aos="zoom-in" data-aos-delay="400">
+                <div class="step-number">04</div>
+                <div class="service-element margin-b-20">
+                    <i class="service-icon icon-rocket" style="font-size: 40px; color: #333;"></i>
+                </div>
+                <h3 class="step-title">Launch & Optimization</h3>
+                <p class="color-dark">Final deployment, search engine optimization (SEO), and post-launch maintenance and support.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Call to Action Section (Reusing Index.html content block structure) -->
+        <div class="bg-color-sky-light">
+                <div class="content-lg container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 md-margin-b-60">
+                            <div class="margin-t-50 margin-b-30" data-aos="fade-right">
+                                <h2 >Ready to Start Your Project?</h2>
+                                <p>Whether you need a cutting-edge data solution or a captivating 3D animation, Orezilla Technology is your partner for digital success. Let’s discuss how our specialized services can meet your unique business objectives.</p>
+                            </div>
+                            <a href="index.html#contact" class="btn-theme btn-theme-sm btn-white-bg text-uppercase" data-aos="fade-right" data-aos-delay="200">Contact Our Team</a>
+                        </div>
+                        <div class="col-md-5 col-sm-7 col-md-offset-2" >
+                            <!-- Accordion: Quick Service Facts -->
+                            <div class="accordion">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default" data-aos="fade-left" data-aos-delay="100">
+                                        <div class="panel-heading" role="tab" id="headingSOne">
+                                            <h4 class="panel-title">
+                                                <a class="panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSOne" aria-expanded="true" aria-controls="collapseSOne">
+                                                    Full-Service Agency
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSOne">
+                                            <div class="panel-body">
+                                                We offer both creative and technical services, making us a single point of contact for all your digital needs.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default" data-aos="fade-left" data-aos-delay="300">
+                                        <div class="panel-heading" role="tab" id="headingSTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSTwo" aria-expanded="false" aria-controls="collapseSTwo">
+                                                    Agile Project Management
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSTwo">
+                                            <div class="panel-body">
+                                                Our flexible approach ensures projects are delivered on time, within budget, and adapt to your evolving requirements.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default" data-aos="fade-left" data-aos-delay="500">
+                                        <div class="panel-heading" role="tab" id="headingSThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSThree" aria-expanded="false" aria-controls="collapseSThree">
+                                                    Dedicated Support
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSThree">
+                                            <div class="panel-body">
+                                                Receive ongoing technical support and maintenance for all developed applications and systems.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Accodrion -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Call to Action Section -->
+
+        <!--========== FOOTER (Identical to index.html) ==========-->
+        <footer class="footer bg-light text-dark pt-5 pb-4">
+            <div class="container">
+                <div class="row align-items-start">
+
+                <!-- Company Info -->
+                <div class="col-md-5 mb-4">
+                    <h3 class="fw-bold mb-3">
+                    <span style="color:red; font-size: 15px;" >Orezilla</span><span style="color:#333;"> Technology</span>
+                    </h3>
+                    <p class="small text-muted" style="font-size: 15px;">
+                    Empowering businesses through creativity, innovation, and technology.  
+                    From data dashboards to animation and web development — we turn ideas into impactful digital experiences.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Quick Links</h6>
+                    <ul class="list-unstyled footer-list">
+                    <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                    <li><a href="index.html#about" class="text-decoration-none text-muted">About Us</a></li>
+                    <li><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+                    <li><a href="index.html#contact" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Legal</h6>
+                    <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="text-decoration-none text-muted">Disclaimer</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-5">Follow Us</h6>
+                    <div class="d-flex gap-10">
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-facebook-f" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-instagram" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-twitter" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-youtube" style="padding-right: 10px;"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Copyright -->
+                <hr class="mt-4 mb-3">
+                <div class="text-center small text-muted">
+                © <span id="year"></span> Orezilla Technology. All rights reserved.
+                </div>
+            </div>
+            </footer>
+
+
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        // Initialize AOS and WOW for scrolling effects
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        new WOW().init();
+        </script>
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+        
+
+    </body>
+    <!-- END BODY -->
+</html>

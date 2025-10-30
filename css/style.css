@@ -1,0 +1,87 @@
+.service {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  min-height: 300px;
+}
+.service:hover {
+  transform: translateY(-8px);
+  background-color: #FF8C00;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+.service:hover .service-icon,
+.service:hover h3,
+.service:hover p {
+  color: #fff !important;
+}
+.service-icon {
+  font-size: 42px;
+  color:#FF8C00;
+  margin-bottom: 15px;
+  transition: color 0.4s ease;
+}
+.service-info h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.service-info p {
+  font-size: 15px;
+  color: #555;
+}
+.footer {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin-top: 80px; /* 👈 space before footer */
+  padding-top: 60px;
+}
+
+.footer h6 {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.footer-list li {
+  margin-bottom: 8px;
+}
+.footer-list a:hover {
+  color: #FF8C00 !important;
+}
+.footer i:hover {
+  color: #FF8C00 !important;
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+  
+
+  /* Input focus styling */
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    border-color: #FF8C00 ;
+    box-shadow: 0 0 0 0.2rem #FF8C00;
+  }
+.submit-btn {
+  background-color: #FF8C00 ; /* Brand red */
+  color: #fff;
+  border: none;
+  min-width: 250px  ;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.25);
+}
+
+.submit-btn:hover {
+  background-color: #b3202d; /* Slightly darker red on hover */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.35);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.25);
+}
+
