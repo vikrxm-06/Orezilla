@@ -17,17 +17,52 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet">
         <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout2.min.css" rel="stylesheet" type="text/css"/>
         <link rel="shortcut icon" href="favicon.ico"/>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        
 
+
+        
       <style>
         /* Custom styles to make new sections fit the existing theme */
         
-        
+        .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 10;
+        }
+
+        .slider-title {
+        font-size: 48px;
+        color: white;
+        font-weight: 700;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .slider-tagline {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+        .slider-title {
+            font-size: 28px;
+        }
+        .slider-tagline {
+            font-size: 16px;
+        }
+        }
+
         
         .step-number {
             font-size: 40px;
@@ -95,39 +130,23 @@
        
         <!--========== SLIDER (Reduced Height via CSS) ==========-->
         <div id="carousel-example-generic" class="carousel slide short-slider" data-ride="carousel">
-            <div class="container">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-            </div>
+            
 
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <!-- Image is now scaled down by the custom CSS (short-slider) -->
+                <div class="item active position-relative">
                     <img class="img-responsive" src="img/service1.jpg" alt="Creative Services Slider Image">
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h1 class="carousel-title" data-aos="fade-up" data-aos-delay="0">Creativity & Innovation: Services That Deliver</h1>
-                                <p class="color-white" data-aos="fade-up" data-aos-delay="200">Explore our full suite of professional digital services, tailored to transform your business and captivate your audience.</p>
-                            </div>
-                            <a href="#services" class="btn-theme btn-theme-sm btn-white-brd text-uppercase js_smooth-scroll" data-aos="fade-up" data-aos-delay="400">View All Services</a>
-                        </div>
+
+                    <!-- Overlay text container -->
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="slider-title" data-aos="fade-up">Our Creative & Digital Services</h1>
+                        <p class="slider-tagline" data-aos="fade-up" data-aos-delay="200">
+                        Empowering your business through design, technology & innovation.
+                        </p>
                     </div>
                 </div>
-                <div class="item">
-                    <img class="img-responsive" src="img/service2.jpg" alt="IT Solutions Slider Image">
-                    <div class="container">
-                        <div class="carousel-centered">
-                            <div class="margin-b-40">
-                                <h2 class="carousel-title" data-aos="fade-up" data-aos-delay="0">Custom IT Solutions & Digital Transformation</h2>
-                                <p class="color-white" data-aos="fade-up" data-aos-delay="200">From advanced data dashboards to secure cloud integration, we provide the technical foundation for your growth.</p>
-                            </div>
-                            <a href="#full-services" class="btn-theme btn-theme-sm btn-white-brd text-uppercase js_smooth-scroll" data-aos="fade-up" data-aos-delay="400">Get a Free Quote</a>
-                        </div>
-                    </div>
-                </div>
+
+
+                
             </div>
         </div>
         <!--========== END SLIDER ==========-->
@@ -136,13 +155,7 @@
           <div id="services">
             <div class="bg-color-sky-light" data-auto-height="true">
                 <div class="content-lg container">
-                <div class="row margin-b-40 text-center">
-                    <div class="col-sm-12">
-                    <h2 data-aos="fade-up">Our Services</h2>
-                    <p data-aos="fade-up">At <strong>Orezilla Technology</strong>, we merge creativity with technology to deliver end-to-end digital solutions. Our diverse range of services — including animation, design, development, and data dashboards — empowers businesses to innovate, communicate, and grow in today’s digital world.</p>
-                    </div>
-                </div>
-
+                
                 <!-- ROW 1 -->
                 <div class="row row-space-1 margin-b-2">
                     <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
@@ -182,6 +195,45 @@
                     </div>
                 </div>
 
+                <div class="row row-space-1 margin-b-2">
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-settings"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Engineering or architectural visualizations</h3>
+                        <p>From concept modeling to immersive walkthroughs, we combine precision, realism, and creativity to support architects, engineers, and developers in presenting their ideas with impact.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-film"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Hybrid / Mixed Media Animation</h3>
+                        <p>We blend 2D, 3D, live-action, and motion graphics to craft visually rich stories that captivate audiences.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service">
+                        <div class="service-element">
+                        <i class="service-icon icon-plus"></i>
+                        </div>
+                        <div class="service-info">
+                        <h3>Medical or industrial simulations</h3>
+                        <p>Transform complex processes into clear, visually engaging medical and industrial animations.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                
                 <!-- ROW 2 -->
                 <div class="row row-space-1 margin-b-2">
                     <div class="col-sm-4 sm-margin-b-2" data-aos="fade-up" data-aos-delay="100">
@@ -229,7 +281,7 @@
                         <i class="service-icon icon-camera"></i>
                         </div>
                         <div class="service-info">
-                        <h3>Photography & Video Editing</h3>
+                        <h3>Visual Effects (VFX)</h3>
                         <p>Deliver professional visuals and post-production edits that capture attention and convey your brand’s story.</p>
                         </div>
                     </div>
@@ -468,7 +520,7 @@
         <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 
         <!-- PAGE LEVEL SCRIPTS -->
-        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/layout2.min.js" type="text/javascript"></script>
         <script src="js/components/wow.min.js" type="text/javascript"></script>
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>

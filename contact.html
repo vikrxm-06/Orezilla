@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+   
+    <head>
+        <meta charset="utf-8"/>
+        <title>Our Services | Animation, Web Development, Dashboard & SEO | Orezilla Technology</title>
+        <meta name="description" content="Discover Orezilla Technology’s full range of digital services — from 2D & 3D animation, motion graphics, and video editing to web application development, UI/UX design, dashboard creation, and SEO optimization.">
+        <meta name="keywords" content="2D animation, 3D animation, explainer videos, product animation, motion graphics, web application development, mobile app development, UI UX design, dashboard creation, SEO optimization, graphics design, video editing, creative tech solutions">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Explore the creative and IT services offered by Orezilla Technology." name="description"/>
+        <meta content="FairTech" name="author"/>
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+		    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        
+      <style>
+        /* Custom styles to make new sections fit the existing theme */
+        .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 10;
+        }
+
+        .slider-title {
+        font-size: 48px;
+        color: white;
+        font-weight: 700;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .slider-tagline {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+        .slider-title {
+            font-size: 28px;
+        }
+        .slider-tagline {
+            font-size: 16px;
+        }
+        }
+        
+        
+        .step-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: 500;
+        }
+        .timeline-line {
+            height: 2px;
+            background: #d9534f;
+            margin: 0 auto;
+            width: 80%;
+            position: relative;
+            top: 25px;
+            z-index: 0;
+            display: none; /* Hide on small screens */
+        }
+        @media (min-width: 768px) {
+            .timeline-line {
+                display: block; /* Show timeline on desktop */
+            }
+        }
+    </style>
+    </head>
+   
+  
+    <body id="body" data-spy="scroll" data-target=".header">
+
+          <header class="header navbar-fixed-top">
+              <nav class="navbar" role="navigation">
+                <div class="container">
+                      <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                          <div class="logo">
+                            <!-- Link to index.html -->
+                            <a class="logo-wrap" href="index.html" style="padding-top: 25px;">
+                                <h3 class="logo-img logo-img-main" alt="Orezilla Logo"><strong style="color: red;">Orezilla</strong><strong  style="color: white;">Technology</strong></h3>
+                                <h3 class="logo-img logo-img-active" alt="Orezilla Dark Logo"><strong style="color: red;">Orezilla</strong><strong  style="color: rgb(83, 83, 83);">Technology</strong></h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <!-- Navigation links point to sections on index.html, except for Services -->
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#about">About Us</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#products">Projects</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover active" href="services.html">Services</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+			</header>
+       
+        <!--========== SLIDER (Reduced Height via CSS) ==========-->
+        <div id="carousel-example-generic" class="carousel slide short-slider" data-ride="carousel">
+            
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active position-relative">
+                    <img class="img-responsive" src="img/contact1.jpg" alt="Creative Services Slider Image">
+
+                    <!-- Overlay text container -->
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="slider-title" data-aos="fade-up">Contact us</h1>
+                        <p class="slider-tagline" data-aos="fade-up" data-aos-delay="200">
+                        Let's build the future together
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--========== END SLIDER ==========-->
+
+        <section id="contact" class="py-6 bg-white">
+  <div class="container">
+    
+
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-lg-12" >
+        <form id="contactForm" class="p-5 bg-light rounded-4 shadow-lg text-center" style="margin: 50px;" >
+          <div class="row g-5" >
+            <div class="col-md-6">
+              <label for="name" class="form-label fw-semibold " style="font-size: 18px;">Your Name</label>
+              <input type="text" class="form-control form-control-lg text-left" id="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label fw-semibold" style="font-size: 18px;">Email Address</label>
+              <input type="email" class="form-control form-control-lg text-left" id="email" placeholder="example@domain.com" required>
+            </div>
+            
+            <br>
+            <div class="col-11">
+              <label for="message" class="form-label fw-semibold" style="font-size: 18px; padding: 10px;">Your Message</label>
+              <textarea style="min-height: 100%;" class="form-control form-control-lg text-left" id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+          </div>
+
+          <div class="text-center mt-5" style="padding: 15px;">
+            <button type="submit" class="btn submit-btn  px-5 py-3 rounded-pill fw-semibold" style="font-size: 18px;  background-color:#FF8C00 ; ">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1200">
+      <p class="text-muted mb-2" style="font-size: 18px;">Prefer direct contact?</p>
+      <p class="fw-semibold mb-0" style="font-size: 18px;">
+        📧 <a href="mailto:info@orezilla.com" class="text-decoration-none text-dark">info@orezilla.com</a>
+        &nbsp; | &nbsp;
+        📞 <a href="tel:+919876543210" class="text-decoration-none text-dark">+91 9360159152</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Optional JS for Message & AOS -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for contacting Orezilla Technology! We’ll get back to you soon.');
+    this.reset();
+  });
+
+  if (typeof AOS !== 'undefined') {
+    AOS.init();
+  }
+</script>
+
+
+        <!--========== FOOTER (Identical to index.html) ==========-->
+        <footer class="footer bg-light text-dark pt-5 pb-4">
+            <div class="container">
+                <div class="row align-items-start">
+
+                <!-- Company Info -->
+                <div class="col-md-5 mb-4">
+                    <h3 class="fw-bold mb-3">
+                    <span style="color:red; font-size: 15px;" >Orezilla</span><span style="color:#333;"> Technology</span>
+                    </h3>
+                    <p class="small text-muted" style="font-size: 15px;">
+                    Empowering businesses through creativity, innovation, and technology.  
+                    From data dashboards to animation and web development — we turn ideas into impactful digital experiences.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Quick Links</h6>
+                    <ul class="list-unstyled footer-list">
+                    <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                    <li><a href="index.html#about" class="text-decoration-none text-muted">About Us</a></li>
+                    <li><a href="services.html" class="text-decoration-none text-muted">Services</a></li>
+                    <li><a href="index.html#contact" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="col-md-2 col-6 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Legal</h6>
+                    <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="text-decoration-none text-muted">Disclaimer</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-5">Follow Us</h6>
+                    <div class="d-flex gap-10">
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-facebook-f" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-instagram" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-twitter" style="padding-right: 10px;"></i></a>
+                    <a href="#" class="text-dark fs-5"><i class="fab fa-youtube" style="padding-right: 10px;"></i></a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Copyright -->
+                <hr class="mt-4 mb-3">
+                <div class="text-center small text-muted">
+                © <span id="year"></span> Orezilla Technology. All rights reserved.
+                </div>
+            </div>
+            </footer>
+
+
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout2.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        // Initialize AOS and WOW for scrolling effects
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        new WOW().init();
+        </script>
+        <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+        
+
+    </body>
+    <!-- END BODY -->
+</html>
