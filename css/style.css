@@ -1116,6 +1116,7 @@ pre .copy-to-clipboard {
     justify-content: center;
     gap: 30px; /* Space between the cards */
     max-width: 1200px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -1151,7 +1152,7 @@ pre .copy-to-clipboard {
 
 /* Card Description */
 .service-card p {
-    font-size: 1em;
+    font-size: 15px;
     color: #666;
     transition: color 0.3s ease;
 }
@@ -1217,7 +1218,7 @@ body {
 .services-grid {
     display: grid;
     /* Creates a responsive grid: 3 columns on large screens, 2 on medium, 1 on small */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -1257,8 +1258,8 @@ body {
     font-size: 1em;
     color: #555555; /* Slightly muted black for description */
     margin-bottom: 20px;
-    height: 4.5em; /* Fixed height for visual consistency */
-    overflow: hidden;
+    flex-grow: 1;
+   
 }
 
 /* Button Styling (Red) */
@@ -1272,10 +1273,12 @@ body {
     font-weight: bold;
     letter-spacing: 0.5px;
     transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 
 .btn-more:hover {
-    background-color: #D62839; /* Darker red on hover */
+    background-color: #fab4b4;
+    border: #000; /* Darker red on hover */
 }
 
 /* Responsive Adjustments */
@@ -1414,3 +1417,82 @@ body {
     text-align: left;
   }
 }
+.service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/* ================================================= */
+/* UPDATED CSS FOR ABOUT US PAGE CONSISTENCY */
+/* ================================================= */
+
+/* --- 1. Font and Text Color Inheritance --- */
+
+/* Ensures all list elements (ul, ol, li) inherit the body font and are black */
+ul, ol, li {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit; 
+    color: #000000 !important; /* Forces all list text to Black */
+}
+
+
+/* --- 2. Title Color Enforcement --- */
+
+/* Sets ALL main headings to Pure Red, overriding Bulma/framework defaults */
+h2, h3, h4 {
+    color: #FF0000 !important; /* Pure Red for titles */
+}
+
+/* Ensures subtitles/card titles (which had specific color classes) are also Red */
+.card-content h4.has-text-primary, 
+.card-content h4.has-text-info {
+    color: #FF0000 !important;
+}
+
+
+/* --- 3. Custom List Styling (list-style-check) --- */
+
+/* Removes default list styling for a cleaner look */
+.list-style-check {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none; 
+}
+
+/* Positions list items for the custom icon */
+.list-style-check li {
+    margin-bottom: 0.75rem; 
+    padding-left: 2rem; /* Space for the checkmark icon */
+    position: relative; 
+}
+
+/* Adds the custom checkmark icon */
+.list-style-check li::before {
+    content: "\f00c"; /* Font Awesome 'check' icon code */
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    color: #48c78e; /* Use a success/primary color for the icon itself */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* --- 4. Custom Component Styling (Optional, but helps visual flow) --- */
+
+/* Style for the boxed feature cards in the 'Our Strength' section */
+.feature-card {
+    border: 1px solid #dbdbdb; 
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Style for the accent line on service cards, if needed */
+/* .accent-box {
+    border-left: 5px solid #00d1b2; 
+} */
