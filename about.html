@@ -17,32 +17,37 @@
 <body>
 
 <nav class="navbar is-sticky-top navigation" role="navigation" aria-label="main navigation">
-   <div class="container">
-      <div class="navbar-brand pt-2">
-         <a class="navbar-item" href="index.html">
-            <h5 class="logo"> <strong><span style="color: red;">Orezilla </span>Technology</strong></h5>
-         </a>
-   
-         <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-         </a>
-      </div>
-   
-      <div id="navbar-links" class="navbar-menu"> </div>
-   
-         <div class="navbar-end ml-0">
-            <div class="navbar-item py-0">
-               <a class="navbar-item" href="index.html">Home</a>
-               <a class="navbar-item" href="list.html">About Us</a>
-               <a class="navbar-item" href="search.html">Our Services</a>
-               <a class="navbar-item" href="search.html">Projects</a>
-               <a href="contact.html" class="btn btn-sm btn-primary ml-4">contact</a>
+    <div class="container">
+
+        <div class="navbar-brand pt-2">
+            <a class="navbar-item" href="index.html">
+                <h5 class="logo"><strong><span style="color: red;">Orezilla</span> Technology</strong></h5>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-links" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index.html">Home</a>
+                <a class="navbar-item" href="about.html">About Us</a>
+                <a class="navbar-item" href="services.html">Our Services</a>
+                <a class="navbar-item" href="projects.html">Projects</a>
+                
+                <div class="navbar-item">
+                    <a href="contact.html" class="button is-danger navbar-cta-btn">
+                        Contact
+                    </a>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+
+        </div>
+
+    </div>
 </nav>
 
 <!-- banner -->
@@ -64,19 +69,19 @@
             
             <div class="service-cards-container">
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-delay="0">
                 
                 <h5>Fast & Flexible</h5>
                 <p>Quick start times, easy direction changes. We deliver results without bureaucracy.</p>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-delay="300">
                 
                 <h5>Directly Focused</h5>
                 <p>The top expert works on your project from start to finish. Zero hand-offs. Maximum quality.</p>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-delay="600">
                 <h5>Invested Partner</h5>
                 <p>We treat your business goals as our own. Your success is our direct measure of performance.</p>
             </div>
@@ -276,6 +281,33 @@
     once: true        // animation happens only once
   });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // 2. Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+        // 3. Add a click event on each one
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+                // 4. Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // 5. Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                if ($target) { // Check if the target element exists
+                    $target.classList.toggle('is-active');
+                }
+            });
+        });
+    }
+});
+</script>
+
 
 
 </body>

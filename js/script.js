@@ -282,3 +282,127 @@
 	});
 
 })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const serviceLinks = document.querySelectorAll('.service-arrow-link');
+    const closeButtons = document.querySelectorAll('.close-panel-btn');
+
+    // Function to handle opening/closing the details panel
+    const togglePanel = (targetId) => {
+        const targetPanel = document.querySelector(targetId);
+        if (!targetPanel) return;
+
+        const isActive = targetPanel.classList.contains('is-active');
+        
+        // 1. Close ALL other panels
+        document.querySelectorAll('.service-details-panel.is-active').forEach(openPanel => {
+            if (openPanel.id !== targetPanel.id.substring(1)) {
+                // Ensure the animation starts from the full height to slide up smoothly
+                openPanel.style.height = openPanel.scrollHeight + 'px';
+                setTimeout(() => {
+                    openPanel.style.height = '0'; // Transition to height 0
+                }, 10);
+                openPanel.classList.remove('is-active');
+
+                // Reset the associated link text
+                const associatedLink = document.querySelector(`.service-arrow-link[data-target="#${openPanel.id}"]`);
+                if (associatedLink) {
+                    associatedLink.innerHTML = `View Details <i class="ti-arrow-right"></i>`;
+                }
+            }
+        });
+
+        // 2. Toggle the current panel
+        if (isActive) {
+            // Close the panel (Slide up)
+            targetPanel.style.height = targetPanel.scrollHeight + 'px'; // Set current height
+            setTimeout(() => {
+                targetPanel.style.height = '0'; // Transition to height 0
+            }, 10);
+            targetPanel.classList.remove('is-active');
+            
+        } else {
+            // Open the panel (Slide down)
+            targetPanel.classList.add('is-active');
+            // Set the height to scrollHeight for the slide-down animation
+            targetPanel.style.height = targetPanel.scrollHeight + 'px';
+            
+            // CRITICAL: Remove height property after transition finishes
+            targetPanel.addEventListener('transitionend', function handler() {
+                if (targetPanel.classList.contains('is-active')) {
+                    targetPanel.style.height = 'auto'; // Revert to auto height after slide is complete
+                }
+                targetPanel.removeEventListener('transitionend', handler);
+            });
+        }
+        
+        // 3. Update the arrow/link text 
+        const currentLink = document.querySelector(`.service-arrow-link[data-target="${targetId}"]`);
+        if (currentLink) {
+            if (isActive) {
+                 currentLink.innerHTML = `View Details <i class="ti-arrow-right"></i>`;
+            } else {
+                 currentLink.innerHTML = `Hide Details <i class="ti-arrow-up"></i>`; // Change arrow direction
+            }
+        }
+    };
+    
+    // Attach listener to all "View Details" links
+    serviceLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            togglePanel(targetId);
+        });
+    });
+
+    // Attach listener to all "Close" buttons
+    closeButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = button.getAttribute('data-target');
+            togglePanel(targetId);
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Get the fixed navigation bar element and calculate its height
+    // Using a safe query selector for the fixed nav bar
+    const navbar = document.querySelector('.navbar.is-sticky-top');
+    // Set a default offset in case the navbar is not found
+    let NAVBAR_HEIGHT = navbar ? navbar.offsetHeight : 0; 
+    
+    // Add extra padding (e.g., 20 pixels) below the navbar for better visual separation
+    const SCROLL_OFFSET = NAVBAR_HEIGHT + 20; 
+
+    const detailButtons = document.querySelectorAll('[data-target]');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            
+            const targetId = button.getAttribute('data-target');
+            const targetPanel = document.querySelector(targetId);
+
+            if (targetPanel) {
+                // (Existing logic to show the panel happens here)
+
+                // Wait for the panel's height transition to complete (500ms is a safe delay)
+                setTimeout(() => {
+                    // 2. Calculate the position to scroll to
+                    // targetPanel.offsetTop gives the element's position from the top of the document
+                    const targetPosition = targetPanel.offsetTop - SCROLL_OFFSET;
+
+                    // 3. Perform the scroll using the calculated position
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 500); 
+            }
+        });
+    });
+});

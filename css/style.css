@@ -1046,6 +1046,16 @@ pre .copy-to-clipboard {
     display: none;
   }
 }
+/* Hide menu on mobile until activated */
+@media (max-width: 1023px) {
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-menu.is-active {
+    display: block;
+  }
+}
+
 .code-tabs {
   overflow: hidden;
   margin-bottom: 20px;
@@ -1496,3 +1506,5 @@ h2, h3, h4 {
 /* .accent-box {
     border-left: 5px solid #00d1b2; 
 } */
+
+  

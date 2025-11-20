@@ -1,0 +1,199 @@
+
+
+.service-hero .title,
+.service-hero .subtitle {
+    text-align: center !important;
+}
+
+/* Container for all service rows */
+.services-row-container {
+    border-top: 1px solid #eee; /* The single line at the very top */
+}
+
+/* Individual Service Item Styling */
+.service-item-rich {
+    padding: 2.5rem 0; /* Vertical padding */
+    border-bottom: 1px solid #eee; /* The line separating each service */
+    transition: background-color 0.3s;
+}
+
+/* Subtle background change on hover for the whole row */
+.service-item-rich:hover {
+    background-color: #fafafa; 
+}
+
+/* Remove default column margins from the main columns inside the service item */
+.service-item-rich > .columns {
+    margin: 0 !important;
+    padding: 0;
+}
+
+/* Column for the Serial Number */
+.service-number-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align number to the left */
+}
+
+.service-serial {
+    font-size: 2rem; 
+    font-weight: 700;
+    color: #ccc; /* Light grey for the serial number */
+    line-height: 1;
+}
+
+/* Column for the Image */
+.service-image-col {
+    display: flex;
+    align-items: center;
+    padding-left: 0; /* Ensure the image is tight against the number column if possible */
+}
+
+.service-row-image {
+    width: 100%;
+    height: auto;
+    max-height: 120px; /* Control image height */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Column for the Content and Arrow */
+.service-content-col {
+    padding-left: 1.5rem; /* Space between image and text */
+}
+
+/* Ensure the inner columns (title/text/arrow) are aligned vertically */
+.service-content-col .columns {
+    margin: 0 !important;
+}
+
+.service-content-col .title {
+    color: #222 !important; 
+    
+}
+
+/* Arrow Link Styling */
+.service-arrow-link {
+    display: inline-flex;
+    align-items: center;
+    color: #e53935; /* Your brand red */
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap; /* Keep link text and arrow together */
+}
+
+.service-arrow-link i {
+    font-size: 1.1em;
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.service-arrow-link:hover {
+    color: #cc0000;
+}
+
+/* Push the arrow slightly right on hover */
+.service-arrow-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+    .service-item-rich {
+        padding: 1.5rem 0;
+    }
+
+    /* Reduce vertical padding around the columns on mobile */
+    .service-number-col, 
+    .service-image-col, 
+    .service-content-col {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    /* On mobile, remove the long description and center the link/arrow below the title */
+    .service-content-col .columns .column {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+    
+    .service-content-col .title {
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Force the arrow link to the left on mobile for better flow */
+    .service-content-col .has-text-right-desktop {
+        text-align: left !important;
+    }
+}
+/* --- Service Details Panel Styling (for sliding content) --- */
+
+.service-details-panel {
+    /* Initially hide the panel, allowing content to take natural space */
+    height: 0;
+    overflow: hidden;
+    /* Smooth transition for the slide effect */
+    transition: height 0.4s ease-in-out, padding 0.4s ease-in-out; 
+    border-bottom: 1px solid #eee; /* Separator for consistency */
+    background-color: #fcfcfc; /* Slight contrast background */
+    margin-top: -1px; /* Overlap border if needed */
+}
+
+.service-details-panel.is-active {
+    /* Height is set dynamically by JavaScript to enable slide effect */
+    /* The active class serves mainly as a flag */
+}
+
+.service-details-panel .panel-content {
+    padding: 2rem 2.5rem; /* Inner padding for content */
+}
+
+/* Style titles inside the panel */
+.service-details-panel .title {
+    color: #e53935 !important; /* Your brand red for clarity */
+}
+
+.close-panel-btn {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+/* Custom CSS to increase the height of the Animation Service Detail rows */
+.service-detail-item {
+    /* Adds significant vertical spacing. Adjust '3rem' (approx 48px) as needed. */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Optional: Make the spacing less aggressive on mobile devices */
+@media (max-width: 768px) {
+    .service-detail-item {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+/* Custom CSS to increase the height of the Animation Service Detail rows */
+.service-detail-item {
+    /* Adds significant vertical spacing. Adjust '3rem' (approx 48px) as needed. */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Optional: Make the spacing less aggressive on mobile devices */
+@media (max-width: 768px) {
+    .service-detail-item {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+/* Custom CSS to increase the vertical space around the image */
+.service-image-spacer {
+    /* Increase this value to increase the row height */
+    margin-top: 6rem !important;    /* Increased from 3rem */
+    margin-bottom: 6rem !important; /* Increased from 3rem */
+}
+
+/* If you are using the service-detail-item class, ensure it has NO padding */
+.service-detail-item {
+    padding-top: initial;
+    padding-bottom: initial;
+}
