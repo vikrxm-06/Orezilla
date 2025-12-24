@@ -1,5 +1,7 @@
 
-
+.section-description{
+    text-align: center;
+}
 .service-hero .title,
 .service-hero .subtitle {
     text-align: center !important;
@@ -52,7 +54,7 @@
 .service-row-image {
     width: 100%;
     height: auto;
-    max-height: 120px; /* Control image height */
+    max-height: auto; /* Control image height */
     object-fit: cover;
     border-radius: 4px;
 }
@@ -94,7 +96,7 @@
 
 /* Push the arrow slightly right on hover */
 .service-arrow-link:hover i {
-    transform: translateX(4px);
+    transform: translateX(1px);
 }
 
 /* Responsive adjustment for mobile screens */
@@ -128,27 +130,7 @@
 }
 /* --- Service Details Panel Styling (for sliding content) --- */
 
-.service-details-panel {
-    /* Initially hide the panel, allowing content to take natural space */
-    height: 0;
-    overflow: hidden;
-    /* Smooth transition for the slide effect */
-    transition: height 0.4s ease-in-out, padding 0.4s ease-in-out; 
-    border-bottom: 1px solid #eee; /* Separator for consistency */
-    background-color: #fcfcfc; /* Slight contrast background */
-    margin-top: -1px; /* Overlap border if needed */
-}
 
-
-
-.service-details-panel .panel-content {
-    padding: 2rem 2.5rem; /* Inner padding for content */
-}
-
-/* Style titles inside the panel */
-.service-details-panel .title {
-    color: #e53935 !important; /* Your brand red for clarity */
-}
 
 .close-panel-btn {
     margin-top: 1rem;
@@ -333,4 +315,300 @@
         display: inline-block;
         margin-bottom: 0.3rem;
     }
+}
+/* ========== TIMELINE CONTAINER ========== */
+.timeline-section {
+    position: relative;
+    padding: 80px 0;
+}
+
+/* The wrapper that holds the line */
+#timeline-progress {
+    position: relative;
+    width: 100%;
+}
+
+/* ========== VERTICAL RED FALLING LINE ========== */
+#progress-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background: #ff3b30;
+    height: 0;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* ========== TIMELINE LAYOUT ========== */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+}
+
+/* Each step block */
+.timeline-row {
+    position: relative;
+    margin: 80px 0;
+}
+
+/* ========== DOTS ========== */
+.step-number {
+    background: #ff3b30;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* hidden dot measuring element */
+.timeline-row::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: #ff3b30;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 50%;
+    
+}
+
+/* ========== TIMELINE CARD ========== */
+.timeline-card {
+    width: 42%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Left & Right alternating layout */
+.timeline-row:nth-child(odd) .timeline-card {
+    margin-left: 0;
+}
+
+.timeline-row:nth-child(even) .timeline-card {
+    margin-left: 58%;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+    .timeline-card {
+        width: 90%;
+        margin: 0 auto !important;
+    }
+}
+.timeline-row {
+    position: relative;
+    margin: 100px 0;
+    min-height: 20px;
+}
+.timeline-row:nth-child(odd) .timeline-card {
+    margin-left: 0;
+}
+
+.timeline-row:nth-child(even) .timeline-card {
+    margin-left: 55%;
+}
+
+.timeline-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.timeline-dot {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #ff3b30;
+    z-index: 2;
+    transition: 0.3s ease;
+    scale: 0.5;
+    opacity: 0;
+}
+#progress-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    background: linear-gradient(#ff3b30, #c70000);
+    height: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    z-index: 1;
+}
+/* default dot */
+.timeline-row::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background: #ff3b30;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    z-index: 3;
+}
+
+/* enlarged effect when activated */
+.timeline-row.active-dot::before {
+    transform: translate(-50%, -50%) scale(1.7);
+    box-shadow: 0 0 12px rgba(255, 59, 48, 0.7);
+}
+
+/* default dot */
+.timeline-row::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background: #ff3b30;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    z-index: 3;
+}
+
+/* enlarged effect when activated */
+.timeline-row.active-dot::before {
+    transform: translate(-50%, -50%) scale(1.7); /* Scale up dot */
+    box-shadow: 0 0 12px rgba(255, 59, 48, 0.7); /* Add glowing shadow */
+}
+
+/* Optional: Add a style to the content card when active */
+.timeline-row.active-dot .timeline-card {
+    border: 1px solid #ff3b30;
+    transition: border 0.3s ease;
+}
+.timeline-row::before {
+    /* ... other styles ... */
+    top: 50% !important; /* The visual dot is vertically centered within the row */
+    transform: translate(-50%, -50%) !important;
+    /* ... other styles ... */
+}
+/* ================================================= */
+/* === RESPONSIVE: HIDE LINE AND DOTS ON MOBILE/TABLET === */
+/* ================================================= */
+
+@media (max-width: 1023px) {
+    /* 1. Hide the vertical line */
+    #progress-line {
+        display: none !important;
+    }
+
+    /* 2. Hide the dots (which are pseudo-elements on .timeline-row) */
+    .timeline-row::before {
+        display: none !important;
+        content: none !important; /* Use content:none for pseudo-elements */
+    }
+
+    /* Optional: Ensure the timeline cards stack correctly */
+    .timeline-row .timeline-card {
+        width: 100% !important; /* Force cards to full width */
+        margin-left: 0 !important; /* Remove any left/right offsets for the card */
+    }
+}
+/* ======================================= */
+/* ========== VERTICAL PROGRESS LINE ========== */
+/* This now uses a CLASS selector to support multiple timelines */
+.progress-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px; /* Must match the width in your original ID selector */
+    background: linear-gradient(#ff3b30, #c70000); /* Must match your original color/gradient */
+    height: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.4);
+    z-index: 1;
+}
+
+/* Also ensure your media query update (for mobile view) is included */
+@media (max-width: 1023px) {
+    .progress-line {
+        display: none !important;
+    }
+    /* ... and other mobile styles for .timeline-row::before ... */
+}
+/* service-details-panel: Hides the panel by default */
+
+/* Style for the close button */
+.close-panel-btn {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* ======================================= */
+/* ========== SERVICE DETAIL PANEL (The definitive block) ========== */
+.service-details-panel {
+    max-height: 0 !important; 
+    overflow: hidden !important; 
+    opacity: 0 !important;
+    padding: 0 !important; 
+    margin: 0 !important;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #eee;
+}
+
+/* Showing state (on click) */
+.service-details-panel.is-active {
+    max-height: 3000px !important; /* Large height for slide down */
+    opacity: 1 !important;
+    padding-top: 2rem !important; 
+    padding-bottom: 2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure the inner content doesn't push it open when closed */
+.service-details-panel:not(.is-active) .panel-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Restore content padding when active */
+.service-details-panel.is-active .panel-content {
+    padding: 2rem 2.5rem !important;
+}
+/* 1. Base State (Hidden) */
+.service-details-panel {
+    /* CRITICAL: Hides the content by collapsing its height */
+    max-height: 0; 
+    overflow: hidden;
+
+    /* OPTIONAL: Adds padding for visual space, but make sure it's inside the transition */
+    padding-top: 0; 
+    padding-bottom: 0;
+    
+    /* CRITICAL: Defines the animation effect */
+    transition: max-height 0.5s ease-out, padding-top 0.5s ease-out, padding-bottom 0.5s ease-out;
+}
+
+/* 2. Active State (Shown) */
+.service-details-panel.is-active {
+    /* CRITICAL: Set this to a value guaranteed to be larger than your panel's content. */
+    /* 1000px is a safe number for almost any content block. */
+    max-height: 1000px; 
+    
+    /* Restore/apply the desired vertical padding */
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem;
 }
